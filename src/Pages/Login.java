@@ -1,3 +1,5 @@
+package Pages;
+
 import db.DBConnection;
 
 import javax.swing.*;
