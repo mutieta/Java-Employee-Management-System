@@ -15,7 +15,7 @@ public class Home extends JDialog {
         setTitle("Main");
         setResizable(false);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setMinimumSize(new Dimension(950, 650));
+        setMinimumSize(new Dimension(1000, 650));
         setLocationRelativeTo(null);
         setContentPane(contentPane);
         addEmployeeButton.addActionListener(new ActionListener() {

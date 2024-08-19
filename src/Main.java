@@ -7,7 +7,7 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new Home().setVisible(true);
+                new Login().setVisible(true);
             }
         });
         //Check if login success
