@@ -29,6 +29,7 @@ public class Add extends JDialog {
     private JComboBox positionComboBox;
     private JTextField txtBankAccountNumber;
     private JPanel dohPickerPanel;
+    private JPanel btnPanel;
 
     private KeyValue[] genderItems = {
             new KeyValue(0, "Select gender"),
