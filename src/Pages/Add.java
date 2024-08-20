@@ -29,6 +29,7 @@ public class Add extends JDialog {
     private JComboBox positionComboBox;
     private JTextField txtBankAccountNumber;
     private JPanel dohPickerPanel;
+    private JPanel btnPanel;
 
     private KeyValue[] genderItems = {
             new KeyValue(0, "Select gender"),
@@ -64,11 +65,10 @@ public class Add extends JDialog {
         departmentComboBox();
         dobDatePicker();
         dohDatePicker();
-
         setTitle("Add Employee");
         setResizable(false);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setMinimumSize(new Dimension(950, 650));
+        setMinimumSize(new Dimension(1000, 650));
         setLocationRelativeTo(null);
         setContentPane(contentPane);
 
@@ -77,6 +77,43 @@ public class Add extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 new Home().setVisible(true);
+            }
+        });
+        createButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    String employeId = txtEmployeeId.getText();
+                    String employeeName = txtName.getText();
+                    KeyValue gender = (KeyValue) txtGender.getSelectedItem();
+                    String email = txtEmail.getText();
+                    String contact = txtContact.getText();
+                    String address = txtAddress.getText();
+                    int salary = Integer.parseInt(txtSalary.getText().trim());
+                    KeyValue status = (KeyValue) txtStatus.getSelectedItem();
+                    String bankName = txtBankName.getText();
+                    String bankAccountNumber = txtBankAccountNumber.getText();
+                    // Assuming dob and doh are set up correctly with the DatePicker component.
+                    String dob = ((DatePicker) dobPickerPanel.getComponent(0)).getText();
+                    String doh = ((DatePicker) dohPickerPanel.getComponent(0)).getText();
+                    KeyValue department = (KeyValue) departComboBox.getSelectedItem();
+                    KeyValue position = (KeyValue) positionComboBox.getSelectedItem();
+
+                    // Validation logic (this can be customized as needed)
+                    if (employeId.isEmpty() || employeeName.isEmpty() || gender.getKey() == 0 ||
+                            email.isEmpty() || contact.isEmpty() || address.isEmpty() ||
+                            salary <= 0 || status.getKey() == 0 || bankName.isEmpty() ||
+                            bankAccountNumber.isEmpty() || dob.isEmpty() || doh.isEmpty() ||
+                            department.getKey() == 0 || position.getKey() == 0) {
+
+                        JOptionPane.showMessageDialog(Add.this, "You missed something! Please fill in all required fields.");
+                    } else {
+                        // Process and store the data
+                    }
+
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(Add.this, "Please enter a valid number for the salary.");
+                }
             }
         });
     }

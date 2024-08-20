@@ -7,15 +7,22 @@ import java.awt.event.ActionListener;
 
 public class Home extends JDialog {
     private JPanel contentPane;
-    private JPanel subPanel;
     private JButton addEmployeeButton;
     private JButton viewEmployeeButton;
+    private JPanel titlePanel;
+    private JLabel titleIcon;
+    private JButton updateButton;
+    private JButton deleteButton;
+    private JButton allowanceButton;
+    private JButton logoutButton;
+    private JPanel subBottomPanel;
+    private JPanel suboTopPanel;
 
     public Home(){
         setTitle("Main");
         setResizable(false);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setMinimumSize(new Dimension(950, 650));
+        setMinimumSize(new Dimension(1000, 650));
         setLocationRelativeTo(null);
         setContentPane(contentPane);
         addEmployeeButton.addActionListener(new ActionListener() {
@@ -23,6 +30,20 @@ public class Home extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 new Add().setVisible(true);
+            }
+        });
+        logoutButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new Login().setVisible(true);
+            }
+        });
+        viewEmployeeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new View().setVisible(true);
             }
         });
     }
