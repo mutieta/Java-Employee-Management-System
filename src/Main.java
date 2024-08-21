@@ -1,5 +1,6 @@
 import Pages.Home;
 import Pages.Login;
+import Pages.View;
 
 import javax.swing.*;
 public class Main {
@@ -7,7 +8,7 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new Login().setVisible(true);
+                new View().setVisible(true);
             }
         });
         //Check if login success

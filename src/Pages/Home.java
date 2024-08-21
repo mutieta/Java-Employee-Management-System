@@ -16,7 +16,7 @@ public class Home extends JDialog {
     private JButton allowanceButton;
     private JButton logoutButton;
     private JPanel subBottomPanel;
-    private JPanel suboTopPanel;
+    private JPanel subTopPanel;
 
     public Home(){
         setTitle("Main");
