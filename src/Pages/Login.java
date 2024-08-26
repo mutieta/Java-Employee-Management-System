@@ -25,7 +25,7 @@ public class Login extends JFrame {
         setTitle("Login Form");
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setMinimumSize(new Dimension(1000, 650));
+        setMinimumSize(new Dimension(1300, 700));
         setLocationRelativeTo(null);
         setContentPane(MainPanel);
         clearButton.addActionListener(new ActionListener() {

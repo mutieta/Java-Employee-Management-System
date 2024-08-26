@@ -16,13 +16,13 @@ public class Home extends JDialog {
     private JButton allowanceButton;
     private JButton logoutButton;
     private JPanel subBottomPanel;
-    private JPanel suboTopPanel;
+    private JPanel subTopPanel;
 
     public Home(){
         setTitle("Main");
         setResizable(false);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setMinimumSize(new Dimension(1000, 650));
+        setMinimumSize(new Dimension(1300, 700));
         setLocationRelativeTo(null);
         setContentPane(contentPane);
         addEmployeeButton.addActionListener(new ActionListener() {
@@ -44,6 +44,20 @@ public class Home extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 new View().setVisible(true);
+            }
+        });
+        updateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new Update().setVisible(true);
+            }
+        });
+        allowanceButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new Payroll().setVisible(true);
             }
         });
     }

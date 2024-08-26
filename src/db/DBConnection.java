@@ -6,7 +6,7 @@ import java.sql.*;
 
 public class DBConnection{
     private static Connection connection;
-    private static Connection getConnection(){
+    public static Connection getConnection(){
         if(connection==null){
             try {
                 connection = DriverManager.getConnection(CommonConstants.DB_URL,CommonConstants.DB_USERNAME,CommonConstants.DB_PASSWORD);
