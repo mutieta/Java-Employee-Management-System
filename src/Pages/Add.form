@@ -45,7 +45,7 @@
           </component>
           <component id="5b4d5" class="javax.swing.JComboBox" binding="txtStatus">
             <constraints>
-              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="35"/>
               </grid>
             </constraints>
@@ -65,7 +65,7 @@
           </component>
           <component id="2b781" class="javax.swing.JTextField" binding="txtBankName">
             <constraints>
-              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="35"/>
               </grid>
             </constraints>
@@ -76,7 +76,7 @@
           </component>
           <component id="d0262" class="javax.swing.JComboBox" binding="departComboBox">
             <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="35"/>
               </grid>
             </constraints>
@@ -87,7 +87,7 @@
           </component>
           <component id="9f01c" class="javax.swing.JComboBox" binding="positionComboBox">
             <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="35"/>
               </grid>
             </constraints>
@@ -107,7 +107,7 @@
           </component>
           <component id="22a34" class="javax.swing.JTextField" binding="txtBankAccountNumber">
             <constraints>
-              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="35"/>
               </grid>
             </constraints>
@@ -127,7 +127,7 @@
           </component>
           <component id="7ac12" class="javax.swing.JTextField" binding="txtSalary">
             <constraints>
-              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="35"/>
               </grid>
             </constraints>
@@ -147,7 +147,7 @@
           </component>
           <grid id="935d4" binding="dohPickerPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
             <constraints>
-              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="-1"/>
               </grid>
             </constraints>
@@ -181,7 +181,7 @@
           </component>
           <component id="8a07b" class="javax.swing.JTextField" binding="txtEmployeeId">
             <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="35"/>
               </grid>
             </constraints>
@@ -238,7 +238,7 @@
           </component>
           <component id="84f" class="javax.swing.JTextField" binding="txtName">
             <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="35"/>
               </grid>
             </constraints>
@@ -249,7 +249,7 @@
           </component>
           <component id="cd7dd" class="javax.swing.JComboBox" binding="txtGender">
             <constraints>
-              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="35"/>
               </grid>
             </constraints>
@@ -260,7 +260,7 @@
           </component>
           <component id="edea7" class="javax.swing.JTextField" binding="txtEmail">
             <constraints>
-              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="35"/>
               </grid>
             </constraints>
@@ -271,7 +271,7 @@
           </component>
           <component id="9a67d" class="javax.swing.JTextField" binding="txtContact">
             <constraints>
-              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="35"/>
               </grid>
             </constraints>
@@ -282,7 +282,7 @@
           </component>
           <component id="f5b7d" class="javax.swing.JTextField" binding="txtAddress">
             <constraints>
-              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="35"/>
               </grid>
             </constraints>
@@ -302,7 +302,7 @@
           </component>
           <grid id="39da3" binding="dobPickerPanel" layout-manager="BorderLayout" hgap="-1" vgap="-1">
             <constraints>
-              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="35"/>
               </grid>
             </constraints>

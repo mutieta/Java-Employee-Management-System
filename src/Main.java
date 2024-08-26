@@ -1,5 +1,6 @@
 import Pages.Home;
-import Pages.Login;
+import Pages.Payroll;
+import Pages.Update;
 import Pages.View;
 
 import javax.swing.*;
@@ -8,7 +9,7 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new View().setVisible(true);
+                new Payroll().setVisible(true);
             }
         });
         //Check if login success
