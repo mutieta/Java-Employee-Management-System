@@ -2,13 +2,13 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Pages.Payroll">
   <grid id="cbd77" binding="contentPane" layout-manager="BorderLayout" hgap="0" vgap="20">
     <constraints>
-      <xy x="48" y="54" width="1126" height="752"/>
+      <xy x="48" y="9" width="1319" height="752"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="8cb76" binding="subPanel" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="true" same-size-vertically="false" hgap="-1" vgap="20">
-        <margin top="0" left="20" bottom="0" right="20"/>
+      <grid id="8cb76" binding="subPanel" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="20">
+        <margin top="10" left="20" bottom="0" right="20"/>
         <constraints border-constraint="Center"/>
         <properties>
           <preferredSize width="1126" height="200"/>
@@ -119,7 +119,7 @@
           <grid id="c5e19" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="30">
             <margin top="20" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="1" row-span="3" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties/>
             <border type="none"/>
@@ -209,7 +209,7 @@
           <grid id="2f27" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="30">
             <margin top="20" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="2" row-span="3" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties/>
             <border type="none"/>
@@ -270,7 +270,7 @@
                   </grid>
                 </constraints>
                 <properties>
-                  <background color="-3355444"/>
+                  <background color="-14112955"/>
                   <font name="Consolas" size="18" style="1"/>
                 </properties>
               </component>
@@ -283,13 +283,55 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-15066139"/>
+              <background color="-14774017"/>
               <font name="Consolas" size="16" style="1"/>
               <foreground color="-1"/>
               <label value="Search"/>
               <text value="Search"/>
             </properties>
           </component>
+          <grid id="70996" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="5b1fa" class="javax.swing.JButton" binding="saveButton" default-binding="true">
+                <constraints/>
+                <properties>
+                  <autoscrolls value="false"/>
+                  <background color="-14112955"/>
+                  <font name="Consolas" size="16" style="1"/>
+                  <foreground color="-1"/>
+                  <preferredSize width="115" height="34"/>
+                  <text value="Save"/>
+                </properties>
+              </component>
+              <component id="1a310" class="javax.swing.JButton" binding="calculateButton" default-binding="true">
+                <constraints/>
+                <properties>
+                  <background color="-9485631"/>
+                  <font name="Consolas" size="16" style="1"/>
+                  <foreground color="-1"/>
+                  <maximumSize width="78" height="34"/>
+                  <minimumSize width="78" height="34"/>
+                  <preferredSize width="115" height="35"/>
+                  <text value="Calculate"/>
+                </properties>
+              </component>
+              <component id="22b79" class="javax.swing.JButton" binding="exitButton" default-binding="true">
+                <constraints/>
+                <properties>
+                  <background color="-40121"/>
+                  <font name="Consolas" size="16" style="1"/>
+                  <foreground color="-1"/>
+                  <preferredSize width="115" height="34"/>
+                  <text value="Exit"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
         </children>
       </grid>
       <grid id="9f36" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -310,69 +352,6 @@
               <text value="Payroll"/>
             </properties>
           </component>
-        </children>
-      </grid>
-      <grid id="d0943" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="20" bottom="30" right="20"/>
-        <constraints border-constraint="South"/>
-        <properties/>
-        <border type="none"/>
-        <children>
-          <component id="bde00" class="javax.swing.JTable" binding="table1" default-binding="true">
-            <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="50"/>
-              </grid>
-            </constraints>
-            <properties/>
-          </component>
-          <grid id="fa653" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-            <margin top="0" left="0" bottom="0" right="0"/>
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties/>
-            <border type="none"/>
-            <children>
-              <component id="5b1fa" class="javax.swing.JButton" binding="saveButton" default-binding="true">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="80" height="40"/>
-                  </grid>
-                </constraints>
-                <properties>
-                  <background color="-15066139"/>
-                  <font name="Consolas" size="16" style="1"/>
-                  <foreground color="-1"/>
-                  <text value="Save"/>
-                </properties>
-              </component>
-              <component id="22b79" class="javax.swing.JButton" binding="exitButton" default-binding="true">
-                <constraints>
-                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="80" height="40"/>
-                  </grid>
-                </constraints>
-                <properties>
-                  <background color="-1756139"/>
-                  <font name="Consolas" size="16" style="1"/>
-                  <foreground color="-1"/>
-                  <text value="Exit"/>
-                </properties>
-              </component>
-              <component id="1a310" class="javax.swing.JButton" binding="calculateButton" default-binding="true">
-                <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
-                    <preferred-size width="80" height="40"/>
-                  </grid>
-                </constraints>
-                <properties>
-                  <font name="Consolas" size="16" style="1"/>
-                  <text value="Calculate"/>
-                </properties>
-              </component>
-            </children>
-          </grid>
         </children>
       </grid>
     </children>
