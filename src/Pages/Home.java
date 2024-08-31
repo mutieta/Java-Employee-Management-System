@@ -25,13 +25,6 @@ public class Home extends JDialog {
         setMinimumSize(new Dimension(1300, 700));
         setLocationRelativeTo(null);
         setContentPane(contentPane);
-        addEmployeeButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-                new Add().setVisible(true);
-            }
-        });
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -58,6 +51,13 @@ public class Home extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 dispose();
                 new Payroll().setVisible(true);
+            }
+        });
+        deleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new Report().setVisible(true);
             }
         });
     }

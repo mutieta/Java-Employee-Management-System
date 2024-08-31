@@ -117,14 +117,20 @@ public class Payroll extends JDialog {
                     }else{
                         do{
                             int employee_id = rs.getInt("employee_id");
-                            if(addPayroll(workDay,ph,bonus,insurance,ratePerDay,ratePerHours,totalAmount,employee_id )){
-                                JOptionPane.showMessageDialog(Payroll.this, "Add employee's payroll is successfully.");
-                                dispose();
-                                new Home().setVisible(true);
+                            if(workDay==0 && ph==0 && insurance==0&& bonus==0&& ratePerDay==0&& ratePerHours==0&&totalAmount==0){
+                                JOptionPane.showMessageDialog(Payroll.this, "You might missed to click Calculate button or input all the field!");
                             }else{
-                                JOptionPane.showMessageDialog(Payroll.this, "You might missed something in the input field, please check and input again!");
-                                return;
+                                if(addPayroll(workDay,ph,bonus,insurance,ratePerDay,ratePerHours,totalAmount,employee_id )){
+                                    JOptionPane.showMessageDialog(Payroll.this, "Add employee's payroll is successfully.");
+                                    dispose();
+                                    new Home().setVisible(true);
+                                }else{
+                                    JOptionPane.showMessageDialog(Payroll.this, "You might missed something in the input field, please check and input again!");
+                                    clearAllField();
+                                    return;
+                                }
                             }
+
                         }while (rs.next());
                     }
                 }catch (SQLException s){
@@ -134,6 +140,27 @@ public class Payroll extends JDialog {
                 }
             }
         });
+    }
+    private void clearAllField(){
+        txtName.setText("");
+        txtPosition.setText("");
+        txtDepartment.setText("");
+        txtSalary.setText("");
+        txtWorkDay.setText("");
+        txtPH.setText("");
+        txtBonus.setText("");
+        txtInsurance.setText("");
+        txtRatePerDay.setText("");
+        txtRatePerHours.setText("");
+        txtSearch.setText("");
+        txtTotalAmount.setText("");
+        workDay=0;
+        ph=0;
+        insurance=0;
+        bonus=0;
+        ratePerDay=0;
+        ratePerHours=0;
+        totalAmount=0;
     }
     private static ResultSet getAnEmployee(String employeeId){
         Connection con = DBConnection.getConnection();

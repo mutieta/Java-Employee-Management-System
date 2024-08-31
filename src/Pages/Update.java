@@ -9,6 +9,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +39,7 @@ public class Update extends JDialog {
     private JPanel btnPanel;
     private JPanel dobPicker;
     private JPanel dohPicker;
+    private JButton addButton;
     private DatePicker dobDatePicker;
     private DatePicker dohDatePicker;
     private String txtSearchVal;
@@ -140,6 +142,58 @@ public class Update extends JDialog {
             public void actionPerformed(ActionEvent e) {
                 updateAnEmployee(anEmployeeId);
 
+            }
+        });
+        addButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    String employeeId = txtEmployeeId.getText();
+                    String employeeName = txtName.getText();
+                    KeyValue gender = (KeyValue) genderComboBox.getSelectedItem();
+                    int genderId = gender.getKey();
+                    String email = txtEmail.getText();
+                    String contact = txtContact.getText();
+                    String address = txtAddress.getText();
+                    int salary = Integer.parseInt(txtSalary.getText().trim());
+                    KeyValue status = (KeyValue) statusComboBox.getSelectedItem();
+                    int statusId = status.getKey();
+                    String bankName = txtBankName.getText();
+                    String bankAccountNumber = txtBackAccount.getText();
+                    // Retrieving LocalDate from DatePicker components
+                    LocalDate dobLocalDate = ((DatePicker) dobPicker.getComponent(0)).getDate();
+                    LocalDate dohLocalDate = ((DatePicker) dohPicker.getComponent(0)).getDate();
+
+                    // Converting LocalDate to java.sql.Date
+                    java.sql.Date dob = java.sql.Date.valueOf(dobLocalDate);
+                    java.sql.Date doh = java.sql.Date.valueOf(dohLocalDate);
+                    KeyValue department = (KeyValue) departmentComboBox.getSelectedItem();
+                    int departmentId = department.getKey();
+                    KeyValue position = (KeyValue) positionComboBox.getSelectedItem();
+                    int positionId= position.getKey();
+                    // Validation logic (this can be customized as needed)
+                    if (employeeId.isEmpty() || employeeName.isEmpty() || genderId == 0 ||
+                            email.isEmpty() || contact.isEmpty() || address.isEmpty() ||
+                            salary <= 0 || statusId == 0 || bankName.isEmpty() ||
+                            bankAccountNumber.isEmpty() || dobLocalDate == null || dohLocalDate == null ||
+                            departmentId == 0 || positionId == 0) {
+
+                        JOptionPane.showMessageDialog(Update.this, "You missed something! Please fill in all required fields.");
+                    } else {
+                        // Process and store the data
+                        boolean insertEmployee= insertEmployeeData(employeeId,employeeName,genderId,email,contact,address,departmentId,positionId,dob,doh,salary,statusId,bankName,bankAccountNumber);
+                        if(insertEmployee){
+                            JOptionPane.showMessageDialog(Update.this,"Insert an employee data was successfully!");
+                            dispose();
+                            new Home().setVisible(true);
+                        }else{
+                            JOptionPane.showMessageDialog(Update.this,"Insert an employee data was Fail!");
+                        }
+                    }
+
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(Update.this, "Please enter a valid number for the salary.");
+                }
             }
         });
     }
@@ -274,6 +328,32 @@ public class Update extends JDialog {
             e.printStackTrace();
         }
         return rs;
+    }
+    public static boolean insertEmployeeData(String employee_id_card, String employee_name, int gender_id, String email, String phone_number, String address, int department_id, int position_id, Date date_of_birth, Date date_of_hiring, int base_salary, int status_id, String bank_name, String bank_account_number ){
+        Connection con = DBConnection.getConnection();
+        try{
+            String query="INSERT INTO employee_management.employee (employee_id_card, employee_name, gender_id, email, phone_number, address, department_id, position_id, date_of_birth, date_of_hiring, base_salary, status_id, bank_name, bank_account_number) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            PreparedStatement insertStmt = con.prepareStatement(query);
+            insertStmt.setString(1,employee_id_card);
+            insertStmt.setString(2,employee_name);
+            insertStmt.setInt(3, gender_id);
+            insertStmt.setString(4,email);
+            insertStmt.setString(5,phone_number);
+            insertStmt.setString(6,address);
+            insertStmt.setInt(7, department_id);
+            insertStmt.setInt(8, position_id);
+            insertStmt.setDate(9, date_of_birth);
+            insertStmt.setDate(10, date_of_hiring);
+            insertStmt.setInt(11, base_salary);
+            insertStmt.setInt(12, status_id);
+            insertStmt.setString(13, bank_name);
+            insertStmt.setString(14, bank_account_number);
+            int rowAffected= insertStmt.executeUpdate();
+            return rowAffected>0;
+        }catch (SQLException e){
+            e.printStackTrace();
+            return false;
+        }
     }
     private static boolean deleteAnEmployee(String employeeId){
         Connection con = DBConnection.getConnection();
