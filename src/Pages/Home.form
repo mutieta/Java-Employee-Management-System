@@ -64,22 +64,12 @@
               <text value=""/>
             </properties>
           </component>
-          <component id="49fa0" class="javax.swing.JButton" binding="addEmployeeButton" default-binding="true">
-            <constraints/>
-            <properties>
-              <background color="-342851"/>
-              <font name="Consolas" size="24" style="1"/>
-              <icon value="images/add.png"/>
-              <preferredSize width="160" height="160"/>
-              <text value=""/>
-            </properties>
-          </component>
           <component id="97207" class="javax.swing.JButton" binding="updateButton">
             <constraints/>
             <properties>
               <background color="-342851"/>
               <font name="Consolas" size="24" style="1"/>
-              <icon value="images/profile.png"/>
+              <icon value="images/add.png"/>
               <preferredSize width="160" height="160"/>
               <text value=""/>
             </properties>
